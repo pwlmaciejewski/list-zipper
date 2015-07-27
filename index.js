@@ -27,8 +27,24 @@ ListZipper.prototype.i = function() {
 
 ListZipper.prototype.goRight = function() {
   return this.mutate(function() {
+    if (this.right.length === 1) return;
     this.left.push(this.right.shift());
   });
+};
+
+ListZipper.prototype.next = function() {
+  return this.goRight.apply(this, arguments);
+};
+
+ListZipper.prototype.goLeft = function() {
+  return this.mutate(function() {
+    if (!this.left.length) return;
+    this.right.unshift(this.left.pop());
+  });
+};
+
+ListZipper.prototype.prev = function() {
+  return this.goLeft.apply(this, arguments);
 };
 
 ListZipper.prototype.mutate = function(fn) {

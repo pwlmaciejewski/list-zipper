@@ -36,15 +36,37 @@ describe('List zipper', function() {
     });
   });
 
-  describe('right()', function() {
+  describe('goRight()', function() {
     it('Moves focus to the next element', function() {
-      assert.equal(lz([1, 2, 3]).goRight().goRight().val(), 3);
+      assert.equal(lz([1, 2, 3]).goRight().next().val(), 3);
     });
 
     it('Is an immutable change', function() {
       var z1 = lz([1, 2, 3]);
       var z2 = z1.goRight();
       assert.equal(z1.val(), 1);
+    });
+
+    it('Does not move outside the index', function() {
+      var z = lz([1, 2, 3], 2).goRight();
+      assert.equal(z.val(), 3);
+    });
+  });
+
+  describe('goLeft()', function() {
+    it('Moves focus to the previous element', function() {
+      assert.equal(lz([1, 2, 3], 2).goLeft().prev().val(), 1);
+    });
+
+    it('Is an immutable change', function() {
+      var z1 = lz([1, 2, 3], 2);
+      var z2 = z1.goLeft();
+      assert.equal(z1.val(), 3);
+    });
+
+    it('Does not move outside the index', function() {
+      var z = lz([1, 2, 3]).goLeft();
+      assert.equal(z.val(), 1);
     });
   });
 });
