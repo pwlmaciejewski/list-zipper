@@ -1,0 +1,28 @@
+{
+  "name": "list-zipper",
+  "version": "0.0.1",
+  "description": "Immutable list zipper, inspired by Haskell Data.List.Zipper",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pwlmaciejewski/list-zipper.git"
+  },
+  "keywords": [
+    "immutable",
+    "list",
+    "zipper"
+  ],
+  "author": "Paweł Maciejewski <fragphace@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pwlmaciejewski/list-zipper/issues"
+  },
+  "homepage": "https://github.com/pwlmaciejewski/list-zipper",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  }
+}
