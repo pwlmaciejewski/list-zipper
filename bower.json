@@ -1,0 +1,28 @@
+{
+  "name": "list-zipper",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/pwlmaciejewski/list-zipper",
+  "authors": [
+    "Paweł Maciejewski <fragphace@gmail.com>"
+  ],
+  "description": "Immutable list zipper, inspired by Haskell Data.List.Zipper",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "immutable",
+    "list",
+    "zipper"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
