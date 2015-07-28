@@ -53,4 +53,17 @@ ListZipper.prototype.mutate = function(fn) {
   return that;
 };
 
-module.exports = ListZipper;
+// Node.js
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = ListZipper;
+}
+// AMD / RequireJS
+else if (typeof define !== 'undefined' && define.amd) {
+  define([], function () {
+      return ListZipper;
+  });
+}
+// included directly via <script> tag
+else {
+  window.ListZipper = ListZipper;
+}
