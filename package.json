@@ -4,7 +4,8 @@
   "description": "Immutable list zipper, inspired by Haskell Data.List.Zipper",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "docs": "jsdox --output docs index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/pwlmaciejewski/list-zipper",
   "devDependencies": {
     "chai": "^3.2.0",
+    "jsdox": "^0.4.9",
     "mocha": "^2.2.5"
   }
 }
