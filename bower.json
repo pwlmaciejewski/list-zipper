@@ -1,7 +1,7 @@
 {
   "name": "list-zipper",
   "main": "index.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/pwlmaciejewski/list-zipper",
   "authors": [
     "Paweł Maciejewski <fragphace@gmail.com>"
