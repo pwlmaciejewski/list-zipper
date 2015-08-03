@@ -47,9 +47,10 @@ ListZipper.prototype.val = function() {
 /**
   * index
   * @description Get currently focused value index in the original array.
-  * @param {Number} [optional] Changes currently focused index
-  * @example ListZipper([1, 2, 3], 1).index() // 1
-  * @example ListZipper([1, 2, 3], 1).index(2).index() // 2
+  * @param {Number} [i] (optional) Changes currently focused index
+  * @example
+  * ListZipper([1, 2, 3], 1).index() // 1
+  * ListZipper([1, 2, 3], 1).index(2).index() // 2
   */
 ListZipper.prototype.index = function(i) {
   if (!i) return this.left.length;
@@ -58,7 +59,7 @@ ListZipper.prototype.index = function(i) {
 
 /**
   * i
-  * @description Aliast for .index().
+  * @description Alias for .index().
   */
 ListZipper.prototype.i = function() {
   return this.index.apply(this, arguments);

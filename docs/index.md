@@ -34,28 +34,24 @@ ListZipper([1, 2, 3], 1).value() // 2
 Aliast for .value().
 
 
-### ListZipper.index(optional) 
+### ListZipper.index(i) 
 
 Get currently focused value index in the original array.
 
 **Parameters**
 
-**optional**: `Number`, Changes currently focused index
+**i**: `Number`, (optional) Changes currently focused index
 
 
 **Example**:
 ```js
-ListZipper([1, 2, 3], 1).index() // 1,ListZipper([1, 2, 3], 1).index(2).index() // 2
-```
-
-**Example**:
-```js
-ListZipper([1, 2, 3], 1).index() // 1,ListZipper([1, 2, 3], 1).index(2).index() // 2
+ListZipper([1, 2, 3], 1).index() // 1
+ListZipper([1, 2, 3], 1).index(2).index() // 2
 ```
 
 ### ListZipper.i() 
 
-Aliast for .index().
+Alias for .index().
 
 
 ### ListZipper.goRight() 
