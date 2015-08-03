@@ -69,4 +69,17 @@ describe('List zipper', function() {
       assert.equal(z.val(), 1);
     });
   });
+
+  describe('index(i) setter', function() {
+    it('Changes currently focused element', function() {
+      var z = lz([1, 2, 3], 1);
+      assert.equal(z.i(2).val(), 3);
+    });
+
+    it('Returns a new instance', function() {
+      var z1 = lz([1, 2, 3], 1);
+      var z2 = z1.index(2);
+      assert.notEqual(z1, z2);
+    });
+  });
 });

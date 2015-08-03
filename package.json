@@ -1,6 +1,6 @@
 {
   "name": "list-zipper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Immutable list zipper, inspired by Haskell Data.List.Zipper",
   "main": "index.js",
   "scripts": {

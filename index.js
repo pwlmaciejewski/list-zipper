@@ -9,7 +9,7 @@
   * @description Can be used without `new` as well.
   * @constructor
   * @param {Array} arr - Input list
-  * @param {number} focusedIndex - (optional) Initial value
+  * @param {Number} focusedIndex - (optional) Initial value
   */
 function ListZipper(arr, focusedIndex) {
   if (!(this instanceof ListZipper)) return new ListZipper(arr, focusedIndex);
@@ -47,10 +47,13 @@ ListZipper.prototype.val = function() {
 /**
   * index
   * @description Get currently focused value index in the original array.
+  * @param {Number} [optional] Changes currently focused index
   * @example ListZipper([1, 2, 3], 1).index() // 1
+  * @example ListZipper([1, 2, 3], 1).index(2).index() // 2
   */
-ListZipper.prototype.index = function() {
-  return this.left.length;
+ListZipper.prototype.index = function(i) {
+  if (!i) return this.left.length;
+  return new ListZipper(this.toArray(), i);
 };
 
 /**
